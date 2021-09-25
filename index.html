@@ -8,6 +8,66 @@
 </head>
 <body>
     
+    <div class="wrapper">
+        <div class="form">
+            <form action="#" class="form__body" id="form">
+                <h1 class="form__title">Отправка данных на почту</h1>
+                <div class="form__item">
+                    <label for="formName" value="" id="form" class="form__label">Введите имя*:</label>
+                    <input id="formName" type="text" name="name" class="form__input">
+                </div>
+                <div class="form__item">
+                    <label for="formEmail" class="form__label">Введите E-mail*:</label>
+                    <input id="formEmail" type="text" name="email" class="form__input">
+                </div>
+                <div class="form__item">
+                    <div class="form__title">Левша или правша?</div>
+                    <div class="options">
+                        <div class="options__item">
+                            <input type="radio" checked name="hand" value="right" id="formRightHanded" class="options__input">
+                            <label for="formRightHanded" class="options__label">Правша</label>
+                        </div>
+                        <div class="options__item">
+                            <input type="radio" name="hand" value="left" id="formLeftHanded" class="options__input">
+                            <label for="formLeftHanded" class="options__label">Левша</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="formMessage" class="form__label">Сообщение:</label>
+                    <textarea name="message" id="formMessage" class="form__input"></textarea>
+                </div>
+                <div class="form__item">
+                    <div class="form__label">Возраст:</div>
+                    <select name="age" class="select">
+                        <option value="от 18 до 25" selected>Молодой</option>
+                        <option value="от 26 до 45">Старый</option>
+                        <option value="от 45">Супер Стар</option>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <div class="form__label">Прикрепить фото</div>
+                    <div class="file">
+                        <div class="file__item">
+                            <input accept=".jpg, .png, .gif" type="text" name="image" id="formImage" class="file__input">
+                            <div class="file__button">Вибрать</div>
+                        </div>
+                        <div class="file__preview"></div>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <div class="checkbox">
+                        <input type="checkbox" checked id="formAgreement" class="checkbox__input"></input>
+                        <label for="" class="forn__label"><span>Я даю свое согласие на обработку персональных данных</span></label>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+
+
     <input type="text">
     <select tabindex="13" name="modelname" class="select" id="modelname" style="display: block;" selected="selected">
         <option value="" selected="" disabled="">Оберіть варіанти</option>
