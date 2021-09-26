@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,28 +15,28 @@
                 <h1 class="form__title">Отправка данных на почту</h1>
                 <div class="form__item">
                     <label for="formName" value="" id="form" class="form__label">Введите имя*:</label>
-                    <input id="formName" type="text" name="name" class="form__input">
+                    <input id="formName" type="text" name="name" class="form__input _require">
                 </div>
                 <div class="form__item">
                     <label for="formEmail" class="form__label">Введите E-mail*:</label>
-                    <input id="formEmail" type="text" name="email" class="form__input">
+                    <input id="formEmail" type="text" name="email" class="form__input _require _email">
                 </div>
                 <div class="form__item">
-                    <div class="form__title">Левша или правша?</div>
+                    <div class="form__label">Левша или правша?</div>
                     <div class="options">
                         <div class="options__item">
                             <input type="radio" checked name="hand" value="right" id="formRightHanded" class="options__input">
-                            <label for="formRightHanded" class="options__label">Правша</label>
+                            <label for="formRightHanded" class="options__label"><span>Правша</span></label>
                         </div>
                         <div class="options__item">
                             <input type="radio" name="hand" value="left" id="formLeftHanded" class="options__input">
-                            <label for="formLeftHanded" class="options__label">Левша</label>
+                            <label for="formLeftHanded" class="options__label"><span>Левша</span></label>
                         </div>
                     </div>
                 </div>
                 <div class="form__item">
                     <label for="formMessage" class="form__label">Сообщение:</label>
-                    <textarea name="message" id="formMessage" class="form__input"></textarea>
+                    <textarea name="message" id="formMessage" class="form__input _require"></textarea>
                 </div>
                 <div class="form__item">
                     <div class="form__label">Возраст:</div>
@@ -49,19 +50,19 @@
                     <div class="form__label">Прикрепить фото</div>
                     <div class="file">
                         <div class="file__item">
-                            <input accept=".jpg, .png, .gif" type="text" name="image" id="formImage" class="file__input">
+                            <input accept=".jpg, .png, .gif" type="file" name="image" id="formImage" class="file__input">
                             <div class="file__button">Вибрать</div>
                         </div>
-                        <div class="file__preview"></div>
+                        <div id="formPreview" class="file__preview"></div>
                     </div>
                 </div>
                 <div class="form__item">
                     <div class="checkbox">
-                        <input type="checkbox" checked id="formAgreement" class="checkbox__input"></input>
-                        <label for="" class="forn__label"><span>Я даю свое согласие на обработку персональных данных</span></label>
+                        <input type="checkbox" checked id="formAgreement" class="checkbox__input _require">
+                        <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>*</span></label>
                     </div>
                 </div>
-
+                <button type="submit" class="form__button" >Отправить</button>
 
             </form>
         </div>
@@ -160,5 +161,7 @@
         <div class="new-select__item WhirlpoolOption" data-value="AWE 55141 UA"><span>AWE 55141 UA</span></div>
         <div class="new-select__item WhirlpoolOption" data-value="TDLR 55020S UA"><span>TDLR 55020S UA</span></div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
