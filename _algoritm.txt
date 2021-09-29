@@ -11,3 +11,13 @@ git push -u origin main
 git remote add origin https://github.com/jackverum/FormValidation.git
 git branch -M main
 git push -u origin main
+
+
+
+===========================
+UPDATE CHANGES
+===========================
+git status
+git add .
+git commit -m "Create html form.page. Start css."
+git push -u origin main
