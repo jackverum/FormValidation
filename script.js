@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
                  if(input.value === '') {
                      formAddError(input);
                      error++;
-                 }
-             }
+                    }
+                }
             }
              return error;
     }

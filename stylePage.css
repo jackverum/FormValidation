@@ -29,12 +29,24 @@ html, body {
    line-height: 1;
    font-size: 14px;
    /* background-color: #333; */
-   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
    
 }
 
 /*  -------------------  */
 
+@font-face {
+	font-family: Myriad-pro;
+	src: url('font/MYRIADPRO-REGULAR.OTF');
+}
+
+:root {
+    --error-color: #ce1313;
+}
+
+.header {
+    box-shadow: 0 0 5px 1px rgb(221 221 221);
+}
 
 .header__container {
     padding-top: 50px;
@@ -44,14 +56,14 @@ html, body {
 }
 
 .header__label a {
-    font-weight: 800;
-    font-size: 35px;
+    /* font-weight: 800; */
+    font-size: 25px;
     color: #353535;
 }
 
 .header__registation {
     font-weight: 600;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .main__block {
@@ -59,25 +71,28 @@ html, body {
     padding-bottom: 50px;
 }
 .main__wrap {
-        max-width: 1200px;
-        padding: 0 15px;
-        margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    font-family: Myriad-pro;
     
 }
 
-.form__peron-title {
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 40px;
-}
-
-.form__body {
+.main__block-register_form {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    /* width: 60%; */
     padding: 0px 30px 250px;
     box-shadow: 0 0 5px 1px rgb(221 221 221);
+}
+
+
+
+.form__body {
+    flex:60%;
+}
+
+.main__block-register_img {
+    flex: 40%;
 }
 
 #form * {
@@ -91,6 +106,64 @@ form h2 {
     margin: 60px 0;
 }
 
+.form__peron-title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.form__peron-item {
+    position: relative;
+}
+.form__peron-item label,
+.form__adress-item label,
+.form__confidentiality label {
+    width: 80%;
+}
+.form__peron-item input,
+.form__adress-item select,
+.form__device input,
+.form__device select,
+.form__adress-item input {
+    width: 80%;
+}
+
+
+.form__peron-item small,
+.form__device-item small {
+    position: absolute;
+    color: var(--error-color);
+    bottom: -15px;
+    visibility: hidden;
+    
+}
+
+
+.form__device-item._error .form__device-small {
+/* .form__device-item._error.form__device-small { */
+    bottom: -24px;
+}
+
+.form__peron-item._error small,
+.form__device-item._error small,
+.form__device-info._error small {
+    visibility: visible;
+}
+
+.form__peron-input._error,
+.form__adress-input._error,
+.form__adress .select._error,
+.form__device .select._error,
+.form__device-input._error,
+.form__device-info._error {
+    box-shadow: 1px 1px 3px #cc3411;
+}
+
+/* , */
+/* .form__device-item._error */
+
+
+
 .form__peron-label,
 .form__adress-label,
 .form__device-label,
@@ -99,7 +172,7 @@ form h2 {
     display: block;
     margin-bottom: 15px;
     font-size: 18px;
-    max-width: 80%;
+    /* max-width: 80%; */
 }
 
 .form__peron-input,
@@ -110,7 +183,7 @@ form h2 {
     border-radius: 3px;
     padding: 7px;
     margin-bottom: 25px;
-    width: 80%;
+    /* width: 80%; */
 }
 
 input:focus {
@@ -334,7 +407,7 @@ input[type="checkbox"]:checked + label::after {
 
 }
 
-.form__device-serial-examp {
+.form__device-examp {
     display: none;
 }
 
@@ -382,6 +455,49 @@ display: flex;
     transition: all 0.3s ease 0s; */
 }
 
-.form__peron-input._error {
-    box-shadow: 2px 2px 18px #cc3411;
+.form__device-info {
+    /* display: inline-block; */
+    width: 80%;
+    position: relative;
+}
+.form__device-info input {
+    /* display: inline-block; */
+    width: 100%;
+}
+
+.form__device-info .span-hover {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 6px;
+    right: 6px;
+    /* right: 10px; */
+    /* right: 10px; */
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    border: 1px solid #edb112;
+    color: #edb112;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.span-hover:hover {
+    color: #fff;
+    background-color: #edb112;
+}
+
+
+
+
+
+.form__button {
+    position: fixed;
+    padding: 10px 30px;
+    background-color: gold;
+    border-radius: 10px;
+    top: 100px;
 }

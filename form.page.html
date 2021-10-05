@@ -23,278 +23,304 @@
 	</header> 
 	<section class="main__block">
 			<div class="main__wrap">
-				<h1 class="form__peron-title">Зареєструвати Ваш прилад</h1>
-				<form action="#" class="form__body" id="form">
-					<div class="form__peron">
-						<!-- <form action="#" class="form__peron-body" id="form"> -->
-						<h2 class="form__peron-item-title">Особиста інформація</h2>
-						<div class="form__peron-item">
-							<label for="formName" class="form__peron-label">Ім'я українською мовою згідно паспорту <span>*</span></label>
-							<input  type="text" id="formName" placeholder="Введіть ім'я" name="name" class="form__peron-input _require">
-						</div>
-						<div class="form__peron-item">
-							<label for="formSecondName" class="form__peron-label">Прізвище українською мовою згідно паспорту <span>*</span></label>
-							<input  type="text" id="formSecondName" placeholder="Введіть прізвище" name="secondname" class="form__peron-input _require">
-						</div>
-						<div class="form__peron-item">
-							<label for="formPhone" class="form__peron-label">Моб. телефон <span>*</span></label>
-							<input  type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" id="formPhone" placeholder="0ххххххххх" name="phone" class="form__peron-input _require">
-						</div>
-						<div class="form__peron-item">
-							<label for="formPhoneConfirm" class="form__peron-label">Підтвердження моб. телефону <span>*</span></label>
-							<input  type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" id="formPhoneConfirm" placeholder="0ххххххххх" name="phoneconfirm" class="form__peron-input _require">
-						</div>
-						<div class="form__peron-item">
-							<label for="formEmail" class="form__peron-label">Електронна пошта <span>*</span></label>
-							<input  type="text" id="formEmail" placeholder="Введіть адресу" name="email" class="form__peron-input _require">
-						</div>
-						<div class="form__peron-item">
-							<label for="formSecondEmail" class="form__peron-label">Підтвердження електронної пошти <span>*</span></label>
-							<input  type="text" id="formSecondEmail" placeholder="Введіть адресу" name="secondemail" class="form__peron-input _require">
-						</div>
-								<!-- </form> -->
-					</div>
-					<div class="form__adress">
-							<!-- <form action="#" class="form__adress-body" id="form"> -->
-									<h2 class="form__adress-item-title">Адреса</h2>
-									<div class="form__adress-item">
-											<label for="formRegion" class="form__adress-label">Область <span>*</span></label>
-											<!-- <input  type="text" id="formName" placeholder="Оберіть варіанти" name="name" class="form__adress-input"> -->
-											<select name="region" id="formRegion" class="select">
-													<option value="" selected="" disabled="">Оберіть варіанти</option>
-													<option value="Вінницька область">Вінницька область</option>
-													<option value="Волинська область">Волинська область</option>
-													<option value="Дніпропетровська область">Дніпропетровська область</option>
-													<option value="Житомирська область">Житомирська область</option>
-													<option value="Закарпатська область">Закарпатська область</option>
-													<option value="Запорізька область">Запорізька область</option>
-													<option value="Івано-Франківська область">Івано-Франківська область</option>
-													<option value="Київська область">Київська область</option>
-													<option value="Кіровоградська область">Кіровоградська область</option>
-													<option value="Львівська область">Львівська область</option>
-													<option value="Миколаївська область">Миколаївська область</option>
-													<option value="Одеська область">Одеська область</option>
-													<option value="Полтавська область">Полтавська область</option>
-													<option value="Рівненська область">Рівненська область</option>
-													<option value="Cумська область">Cумська область</option>
-													<option value="Тернопільська область">Тернопільська область</option>
-													<option value="Харківська область">Харківська область</option>
-													<option value="Херсонська область">Херсонська область</option>
-													<option value="Хмельницька область">Хмельницька область</option>
-													<option value="Черкаська область">Черкаська область</option>
-													<option value="Чернівецька область">Чернівецька область</option>
-													<option value="Чернігівська область">Чернігівська область</option>
-													<option value="м. Київ">м. Київ</option>
-											</select>
-									</div>
-									<div class="form__adress-item">
-											<label for="formStreet" class="form__adress-label">Місто/населений пункт <span>*</span></label>
-											<input  type="text" id="formStreet" placeholder="Введіть назву" name="street" class="form__adress-input">
-									</div>
-									<div class="form__adress-item">
-											<label for="formIndex" class="form__adress-label">Індекс  <span>*</span></label>
-											<input  type="text" id="formIndex" placeholder="Введіть назву" name="street" class="form__adress-input">
-									</div>
-									<div class="form__adress-item">
-											<label for="formPostAdress" class="form__adress-label">Адреса відділення Укрпошти  <span>*</span><br> (на яке робимо відправку подарункового сертифікату)</label>
-											<input  type="text" id="formPostAdress" placeholder="Введіть назву" name="street" class="form__adress-input">
-									</div>
-							<!-- </form> -->
-					</div>
-					<div class="form__confidentiality">
-							<!-- <form action="#" class="form__confidentiality-body" id="form"> -->
-									<h2 class="form__confidentiality-item-title">Конфіденційність</h2>
-									<div class="form__item">
-											<p>Я повністю приймаю повідомлення про порядок поводження з особистою інформацією, а також всі умови та строки ТОВ "Вірлпул Україна". Для того, щоб ознайомитись з повідомленням про порядок поводження з особистою інформацією натисніть <a href="https://www.mywhirlpool.com.ua/confidentiality.html">тут</a>*</p>
-											<div class="checkbox checkbox__block">
-													<p>Я згоден(на) <span>*</span></p>
-													<input type="checkbox" checked id="formAgreement" class="checkbox__input _require">
-													<label for="formAgreement" class="checkbox__label">Так<span></span></label>
-											</div>
-									</div>
-									<!-- </div> -->
-									<h2 class="form__confidentiality-item-title">Повідомлення про відправлення інформації про рекламні кампанії та спеціальні акції</h2>
-									<div class="form__item">
-											<p class="form__label">Я погоджуюсь отримувати від ТОВ "Вірлпул Компані Україна" повідомлення електронною поштою та через смс-повідомлення про рекламні кампанії, спеціальні акції, події та іншу інформацію, яка описана у повній версії повідомлення про порядок поводження з персональними даними. <span>*</span></p>
-											<div class="options">
-													<div class="options__item">
-															<input type="radio" name="messeging" value="right" id="agreeMesseging" class="options__input">
-															<label for="agreeMesseging" class="options__label"><span>Так</span></label>
-													</div>
-													<div class="options__item">
-															<input type="radio" name="messeging" value="left" id="disagreeMesseging" class="options__input">
-															<label for="disagreeMesseging" class="options__label"><span>Нi</span></label>
-													</div>
-											</div>
-									</div>
-							<!-- </form> -->
-					</div>
-					<div class="form__device">
+				<h1 class="form__peron-title">Зареєструвати  Ваш прилад</h1>
+				<div class="main__block-register_form">
+					<form action="#" class="form__body" id="form" method="POST">
+					<!-- <form action="telega.php" class="form__body" id="form" method="POST"> -->
+						<div class="form__peron">
 							<!-- <form action="#" class="form__peron-body" id="form"> -->
+							<h2 class="form__peron-item-title">Особиста інформація</h2>
+							<div class="form__peron-item">
+								<label for="formName" class="form__peron-label">Ім'я українською мовою згідно паспорту <span>*</span></label>
+								<input  type="text" id="formName" placeholder="Введіть ім'я" name="name" class="form__peron-input _require">
+								<small>Введіть ім'я українською мовою *</small>
+							</div>
+							<div class="form__peron-item">
+								<label for="formSecondName" class="form__peron-label">Прізвище українською мовою згідно паспорту <span>*</span></label>
+								<input  type="text" id="formSecondName" placeholder="Введіть прізвище" name="secondname" class="form__peron-input _require">
+								<small>Введіть прізвище українською мовою *</small>
+							</div>
+							<div class="form__peron-item">
+								<label for="formPhone" class="form__peron-label">Моб. телефон <span>*</span></label>
+								<input  type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" id="formPhone" placeholder="0ххххххххх" name="phone" class="form__peron-input _require">
+								<small>Телефон має складатися з 10 цифр. Приклад 0998765473*</small>
+							</div>
+							<div class="form__peron-item">
+								<label for="formPhoneConfirm" class="form__peron-label">Підтвердження моб. телефону <span>*</span></label>
+								<input  type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" id="formPhoneConfirm" placeholder="0ххххххххх" name="phoneconfirm" class="form__peron-input _require">
+								<small>Номера не співпадають *</small>
+							</div>
+							<div class="form__peron-item">
+								<label for="formEmail" class="form__peron-label">Електронна пошта <span>*</span></label>
+								<input  type="text" id="formEmail" placeholder="Введіть адресу" name="email" class="form__peron-input _require">
+								<small>Будь ласка введіть валідну пошту. Приклад example@gmail.com *</small>
+							</div>
+							<div class="form__peron-item">
+								<label for="formSecondEmail" class="form__peron-label">Підтвердження електронної пошти <span>*</span></label>
+								<input  type="text" id="formSecondEmail" placeholder="Введіть адресу" name="secondemail" class="form__peron-input _require">
+								<small>Пошти не співпадають *</small>
+							</div>
+									<!-- </form> -->
+						</div>
+						<div class="form__adress" style="display: none;">
+								<!-- <form action="#" class="form__adress-body" id="form"> -->
+							<h2 class="form__adress-item-title">Адреса</h2>
+							<div class="form__adress-item">
+								<label class="form__adress-label" for="formRegion">Область <span>*</span></label>
+								<!-- <input  type="text" id="formName" placeholder="Оберіть варіанти" name="name" class="form__adress-input"> -->
+								<select class="select _require" id="formRegion" name="region">
+										<option value="" selected="" disabled="">Оберіть варіанти</option>
+										<option value="Вінницька область">Вінницька область</option>
+										<option value="Волинська область">Волинська область</option>
+										<option value="Дніпропетровська область">Дніпропетровська область</option>
+										<option value="Житомирська область">Житомирська область</option>
+										<option value="Закарпатська область">Закарпатська область</option>
+										<option value="Запорізька область">Запорізька область</option>
+										<option value="Івано-Франківська область">Івано-Франківська область</option>
+										<option value="Київська область">Київська область</option>
+										<option value="Кіровоградська область">Кіровоградська область</option>
+										<option value="Львівська область">Львівська область</option>
+										<option value="Миколаївська область">Миколаївська область</option>
+										<option value="Одеська область">Одеська область</option>
+										<option value="Полтавська область">Полтавська область</option>
+										<option value="Рівненська область">Рівненська область</option>
+										<option value="Cумська область">Cумська область</option>
+										<option value="Тернопільська область">Тернопільська область</option>
+										<option value="Харківська область">Харківська область</option>
+										<option value="Херсонська область">Херсонська область</option>
+										<option value="Хмельницька область">Хмельницька область</option>
+										<option value="Черкаська область">Черкаська область</option>
+										<option value="Чернівецька область">Чернівецька область</option>
+										<option value="Чернігівська область">Чернігівська область</option>
+										<option value="м. Київ">м. Київ</option>
+								</select>
+								<small>Незаповнене поле *</small>
+							</div>
+							<div class="form__adress-item">
+								<label class="form__adress-label" for="formStreet">Місто/населений пункт <span>*</span></label>
+								<input class="form__adress-input _require" id="formStreet" type="text" placeholder="Введіть назву" name="street">
+								<small>Незаповнене поле *</small>
+							</div>
+							<div class="form__adress-item">
+								<label class="form__adress-label" for="formIndex">Індекс  <span>*</span></label>
+								<input class="form__adress-input _require"  id="formIndex" type="text" placeholder="Введіть назву" name="street">
+								<small>Незаповнене поле *</small>
+							</div>
+							<div class="form__adress-item">
+								<label class="form__adress-label" for="formPostAdress">Адреса відділення Укрпошти  <span>*</span><br> (на яке робимо відправку подарункового сертифікату)</label>
+								<input class="form__adress-input _require"  id="formPostAdress" type="text" placeholder="Введіть назву" name="street">
+								<small>Незаповнене поле *</small>
+							</div>
+								<!-- </form> -->
+						</div>
+						<div class="form__confidentiality" style="display: none;">
+								<!-- <form action="#" class="form__confidentiality-body" id="form"> -->
+							<h2 class="form__confidentiality-item-title">Конфіденційність</h2>
+							<div class="form__item">
+								<p>Я повністю приймаю повідомлення про порядок поводження з особистою інформацією, а також всі умови та строки ТОВ "Вірлпул Україна". Для того, щоб ознайомитись з повідомленням про порядок поводження з особистою інформацією натисніть <a href="https://www.mywhirlpool.com.ua/confidentiality.html">тут</a>*</p>
+								<div class="checkbox checkbox__block">
+									<p>Я згоден(на) <span>*</span></p>
+									<input type="checkbox" checked id="formAgreement" class="checkbox__input _require">
+									<label for="formAgreement" class="checkbox__label">Так<span></span></label>
+								</div>
+							</div>
+							<!-- </div> -->
+							<h2 class="form__confidentiality-item-title">Повідомлення про відправлення інформації про рекламні кампанії та спеціальні акції</h2>
+							<div class="form__item">
+								<p class="form__label">Я погоджуюсь отримувати від ТОВ "Вірлпул Компані Україна" повідомлення електронною поштою та через смс-повідомлення про рекламні кампанії, спеціальні акції, події та іншу інформацію, яка описана у повній версії повідомлення про порядок поводження з персональними даними. <span>*</span></p>
+								<div class="options">
+									<div class="options__item">
+										<input type="radio" name="messeging" value="right" id="agreeMesseging" class="options__input">
+										<label for="agreeMesseging" class="options__label"><span>Так</span></label>
+									</div>
+									<div class="options__item">
+										<input type="radio" name="messeging" value="left" id="disagreeMesseging" class="options__input">
+										<label for="disagreeMesseging" class="options__label"><span>Нi</span></label>
+									</div>
+								</div>
+							</div>
+								<!-- </form> -->
+						</div>
+						<div class="form__device">
+								<!-- <form action="#" class="form__peron-body" id="form"> -->
 							<h2 class="form__device-item-title">Інформація про прилад</h2>
 							<div class="form__device-item">
-									<label for="formDevice" class="form__device-label">Прилад <span>*</span></label>
-									<select name="region" id="formDevice" class="select">
-											<option value="" selected="" disabled="">Назва приладу</option>
-											<option value="Пральна машина">Пральна машина</option>
-											<option value="Прально-сушильна машина">Прально-сушильна машина</option>
-									</select>
+								<label for="formDevice" class="form__device-label">Прилад <span>*</span></label>
+								<select name="region" id="formDevice" class="select">
+									<option value="" selected="" disabled="">Назва приладу</option>
+									<option value="Пральна машина">Пральна машина</option>
+									<option value="Прально-сушильна машина">Прально-сушильна машина</option>
+								</select>
+								<small>Незаповнене поле *</small>
 							</div>
 							<div class="form__device-item">
-									<label for="formDevice" class="form__device-label">Бренд <span>*</span></label>
-									<select name="region" id="formDevice" class="select">
-											<option value="" selected="" disabled="">Оберіть варіанти</option>
-											<option value="Indesit">Indesit</option>
-									</select>
+								<label for="formBrand" class="form__device-label">Бренд <span>*</span></label>
+								<select name="region" id="formBrand" class="select">
+									<option value="" selected="" disabled="">Оберіть варіанти</option>
+									<option value="Indesit">Indesit</option>
+								</select>
+								<small>Незаповнене поле *</small>
 							</div>
 							<div class="form__device-item">
-									<label for="modelname" class="form__device-label">Назва моделі <span>*</span></label>
-
-									<select name="modelname" class="select" id="modelname" style="display: block;" selected="selected">
-											<option value="" selected="" disabled="">Оберіть варіанти</option>
-											<option value="AWE 50510" class="WhirlpoolOption">AWE 50510</option>
-											<option value="AWE 5080" class="WhirlpoolOption">AWE 5080</option>
-											<option value="AWE 55141" class="WhirlpoolOption">AWE 55141</option>
-											<option value="AWE 60410" class="WhirlpoolOption">AWE 60410</option>
-											<option value="AWE 6080" class="WhirlpoolOption">AWE 6080</option>
-											<option value="AWE 66710" class="WhirlpoolOption">AWE 66710</option>
-											<option value="BI WDWG 75148 EU" class="WhirlpoolOption">BI WDWG 75148 EU</option>
-											<option value="BI WMWG 71484E EU" class="WhirlpoolOption">BI WMWG 71484E EU</option>
-											<option value="FFB 8248 BV UA" class="WhirlpoolOption">FFB 8248 BV UA</option>
-											<option value="FFD 9448 BV UA" class="WhirlpoolOption">FFD 9448 BV UA</option>
-											<option value="FSCR90420" class="WhirlpoolOption">FSCR90420</option>
-											<option value="FWD71284SBEE" class="WhirlpoolOption">FWD71284SBEE</option>
-											<option value="FWD81284WCEE" class="WhirlpoolOption">FWD81284WCEE</option>
-											<option value="FWD91496BV EE" class="WhirlpoolOption">FWD91496BV EE</option>
-											<option value="FWDD1071681B EU" class="WhirlpoolOption">FWDD1071681B EU</option>
-											<option value="FWDG86148B EU" class="WhirlpoolOption">FWDG86148B EU</option>
-											<option value="FWDG97168B EU" class="WhirlpoolOption">FWDG97168B EU</option>
-											<option value="FWG71283BV EE" class="WhirlpoolOption">FWG71283BV EE</option>
-											<option value="FWG81284W EU" class="WhirlpoolOption">FWG81284W EU</option>
-											<option value="FWG81484BV EE" class="WhirlpoolOption">FWG81484BV EE</option>
-											<option value="FWSD71283WS EU" class="WhirlpoolOption">FWSD71283WS EU</option>
-											<option value="FWSD81283BV EE" class="WhirlpoolOption">FWSD81283BV EE</option>
-											<option value="FWSD81283WCV EU" class="WhirlpoolOption">FWSD81283WCV EU</option>
-											<option value="FWSF61053W EU" class="WhirlpoolOption">FWSF61053W EU</option>
-											<option value="FWSF61053W UA" class="WhirlpoolOption">FWSF61053W UA</option>
-											<option value="FWSF61253W EU" class="WhirlpoolOption">FWSF61253W EU</option>
-											<option value="FWSG61053W EU" class="WhirlpoolOption">FWSG61053W EU</option>
-											<option value="FWSG61053WV UA" class="WhirlpoolOption">FWSG61053WV UA</option>
-											<option value="FWSG61083WBV UA" class="WhirlpoolOption">FWSG61083WBV UA</option>
-											<option value="FWSG61253W EU" class="WhirlpoolOption">FWSG61253W EU</option>
-											<option value="FWSG61283BV EE" class="WhirlpoolOption">FWSG61283BV EE</option>
-											<option value="FWSG71283WBV UA" class="WhirlpoolOption">FWSG71283WBV UA</option>
-											<option value="FWSL61052W EU" class="WhirlpoolOption">FWSL61052W EU</option>
-											<option value="FWSL61252W EU" class="WhirlpoolOption">FWSL61252W EU</option>
-											<option value="TDLR 55111" class="WhirlpoolOption">TDLR 55111</option>
-											<option value="TDLR 60210" class="WhirlpoolOption">TDLR 60210</option>
-											<option value="TDLR 60230" class="WhirlpoolOption">TDLR 60230</option>
-											<option value="TDLR 65230" class="WhirlpoolOption">TDLR 65230</option>
-											<option value="TDLRS70210" class="WhirlpoolOption">TDLRS70210</option>
-											<option value="TDLRS70231" class="WhirlpoolOption">TDLRS70231</option>
-											<option value="AWE 6080 UA" class="WhirlpoolOption">AWE 6080 UA</option>
-											<option value="AWE 55141 UA" class="WhirlpoolOption">AWE 55141 UA</option>
-											<option value="TDLR 55020S UA" class="WhirlpoolOption">TDLR 55020S UA</option>
-									</select>
-									<div class="new-select__list" style="display: none;">
-											<div class="new-select__item WhirlpoolOption" data-value="AWE 50510"><span>AWE 50510</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="AWE 5080"><span>AWE 5080</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="AWE 55141"><span>AWE 55141</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="AWE 60410"><span>AWE 60410</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="AWE 6080"><span>AWE 6080</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="AWE 66710"><span>AWE 66710</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="BI WDWG 75148 EU"><span>BI WDWG 75148 EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="BI WMWG 71484E EU"><span>BI WMWG 71484E EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FFB 8248 BV UA"><span>FFB 8248 BV UA</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FFD 9448 BV UA"><span>FFD 9448 BV UA</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FSCR90420"><span>FSCR90420</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWD71284SBEE"><span>FWD71284SBEE</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWD81284WCEE"><span>FWD81284WCEE</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWD91496BV EE"><span>FWD91496BV EE</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWDD1071681B EU"><span>FWDD1071681B EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWDG86148B EU"><span>FWDG86148B EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWDG97168B EU"><span>FWDG97168B EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWG71283BV EE"><span>FWG71283BV EE</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWG81284W EU"><span>FWG81284W EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWG81484BV EE"><span>FWG81484BV EE</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSD71283WS EU"><span>FWSD71283WS EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSD81283BV EE"><span>FWSD81283BV EE</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSD81283WCV EU"><span>FWSD81283WCV EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSF61053W EU"><span>FWSF61053W EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSF61053W UA"><span>FWSF61053W UA</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSF61253W EU"><span>FWSF61253W EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSG61053W EU"><span>FWSG61053W EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSG61053WV UA"><span>FWSG61053WV UA</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSG61083WBV UA"><span>FWSG61083WBV UA</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSG61253W EU"><span>FWSG61253W EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSG61283BV EE"><span>FWSG61283BV EE</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSG71283WBV UA"><span>FWSG71283WBV UA</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSL61052W EU"><span>FWSL61052W EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="FWSL61252W EU"><span>FWSL61252W EU</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="TDLR 55111"><span>TDLR 55111</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="TDLR 60210"><span>TDLR 60210</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="TDLR 60230"><span>TDLR 60230</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="TDLR 65230"><span>TDLR 65230</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="TDLRS70210"><span>TDLRS70210</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="TDLRS70231"><span>TDLRS70231</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="AWE 6080 UA"><span>AWE 6080 UA</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="AWE 55141 UA"><span>AWE 55141 UA</span></div>
-											<div class="new-select__item WhirlpoolOption" data-value="TDLR 55020S UA"><span>TDLR 55020S UA</span></div>
-									</div>
+								<label for="modelname" class="form__device-label">Назва моделі <span>*</span></label>
+								<select name="modelname" class="select" id="modelname" style="display: block;" selected="selected">
+										<option value="" selected="" disabled="">Оберіть варіанти</option>
+										<option value="AWE 50510" class="WhirlpoolOption">AWE 50510</option>
+										<option value="AWE 5080" class="WhirlpoolOption">AWE 5080</option>
+										<option value="AWE 55141" class="WhirlpoolOption">AWE 55141</option>
+										<option value="AWE 60410" class="WhirlpoolOption">AWE 60410</option>
+										<option value="AWE 6080" class="WhirlpoolOption">AWE 6080</option>
+										<option value="AWE 66710" class="WhirlpoolOption">AWE 66710</option>
+										<option value="BI WDWG 75148 EU" class="WhirlpoolOption">BI WDWG 75148 EU</option>
+										<option value="BI WMWG 71484E EU" class="WhirlpoolOption">BI WMWG 71484E EU</option>
+										<option value="FFB 8248 BV UA" class="WhirlpoolOption">FFB 8248 BV UA</option>
+										<option value="FFD 9448 BV UA" class="WhirlpoolOption">FFD 9448 BV UA</option>
+										<option value="FSCR90420" class="WhirlpoolOption">FSCR90420</option>
+										<option value="FWD71284SBEE" class="WhirlpoolOption">FWD71284SBEE</option>
+										<option value="FWD81284WCEE" class="WhirlpoolOption">FWD81284WCEE</option>
+										<option value="FWD91496BV EE" class="WhirlpoolOption">FWD91496BV EE</option>
+										<option value="FWDD1071681B EU" class="WhirlpoolOption">FWDD1071681B EU</option>
+										<option value="FWDG86148B EU" class="WhirlpoolOption">FWDG86148B EU</option>
+										<option value="FWDG97168B EU" class="WhirlpoolOption">FWDG97168B EU</option>
+										<option value="FWG71283BV EE" class="WhirlpoolOption">FWG71283BV EE</option>
+										<option value="FWG81284W EU" class="WhirlpoolOption">FWG81284W EU</option>
+										<option value="FWG81484BV EE" class="WhirlpoolOption">FWG81484BV EE</option>
+										<option value="FWSD71283WS EU" class="WhirlpoolOption">FWSD71283WS EU</option>
+										<option value="FWSD81283BV EE" class="WhirlpoolOption">FWSD81283BV EE</option>
+										<option value="FWSD81283WCV EU" class="WhirlpoolOption">FWSD81283WCV EU</option>
+										<option value="FWSF61053W EU" class="WhirlpoolOption">FWSF61053W EU</option>
+										<option value="FWSF61053W UA" class="WhirlpoolOption">FWSF61053W UA</option>
+										<option value="FWSF61253W EU" class="WhirlpoolOption">FWSF61253W EU</option>
+										<option value="FWSG61053W EU" class="WhirlpoolOption">FWSG61053W EU</option>
+										<option value="FWSG61053WV UA" class="WhirlpoolOption">FWSG61053WV UA</option>
+										<option value="FWSG61083WBV UA" class="WhirlpoolOption">FWSG61083WBV UA</option>
+										<option value="FWSG61253W EU" class="WhirlpoolOption">FWSG61253W EU</option>
+										<option value="FWSG61283BV EE" class="WhirlpoolOption">FWSG61283BV EE</option>
+										<option value="FWSG71283WBV UA" class="WhirlpoolOption">FWSG71283WBV UA</option>
+										<option value="FWSL61052W EU" class="WhirlpoolOption">FWSL61052W EU</option>
+										<option value="FWSL61252W EU" class="WhirlpoolOption">FWSL61252W EU</option>
+										<option value="TDLR 55111" class="WhirlpoolOption">TDLR 55111</option>
+										<option value="TDLR 60210" class="WhirlpoolOption">TDLR 60210</option>
+										<option value="TDLR 60230" class="WhirlpoolOption">TDLR 60230</option>
+										<option value="TDLR 65230" class="WhirlpoolOption">TDLR 65230</option>
+										<option value="TDLRS70210" class="WhirlpoolOption">TDLRS70210</option>
+										<option value="TDLRS70231" class="WhirlpoolOption">TDLRS70231</option>
+										<option value="AWE 6080 UA" class="WhirlpoolOption">AWE 6080 UA</option>
+										<option value="AWE 55141 UA" class="WhirlpoolOption">AWE 55141 UA</option>
+										<option value="TDLR 55020S UA" class="WhirlpoolOption">TDLR 55020S UA</option>
+								</select>
+								<div class="new-select__list" style="display: none;">
+										<div class="new-select__item WhirlpoolOption" data-value="AWE 50510"><span>AWE 50510</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="AWE 5080"><span>AWE 5080</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="AWE 55141"><span>AWE 55141</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="AWE 60410"><span>AWE 60410</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="AWE 6080"><span>AWE 6080</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="AWE 66710"><span>AWE 66710</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="BI WDWG 75148 EU"><span>BI WDWG 75148 EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="BI WMWG 71484E EU"><span>BI WMWG 71484E EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FFB 8248 BV UA"><span>FFB 8248 BV UA</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FFD 9448 BV UA"><span>FFD 9448 BV UA</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FSCR90420"><span>FSCR90420</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWD71284SBEE"><span>FWD71284SBEE</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWD81284WCEE"><span>FWD81284WCEE</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWD91496BV EE"><span>FWD91496BV EE</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWDD1071681B EU"><span>FWDD1071681B EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWDG86148B EU"><span>FWDG86148B EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWDG97168B EU"><span>FWDG97168B EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWG71283BV EE"><span>FWG71283BV EE</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWG81284W EU"><span>FWG81284W EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWG81484BV EE"><span>FWG81484BV EE</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSD71283WS EU"><span>FWSD71283WS EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSD81283BV EE"><span>FWSD81283BV EE</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSD81283WCV EU"><span>FWSD81283WCV EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSF61053W EU"><span>FWSF61053W EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSF61053W UA"><span>FWSF61053W UA</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSF61253W EU"><span>FWSF61253W EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSG61053W EU"><span>FWSG61053W EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSG61053WV UA"><span>FWSG61053WV UA</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSG61083WBV UA"><span>FWSG61083WBV UA</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSG61253W EU"><span>FWSG61253W EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSG61283BV EE"><span>FWSG61283BV EE</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSG71283WBV UA"><span>FWSG71283WBV UA</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSL61052W EU"><span>FWSL61052W EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="FWSL61252W EU"><span>FWSL61252W EU</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="TDLR 55111"><span>TDLR 55111</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="TDLR 60210"><span>TDLR 60210</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="TDLR 60230"><span>TDLR 60230</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="TDLR 65230"><span>TDLR 65230</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="TDLRS70210"><span>TDLRS70210</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="TDLRS70231"><span>TDLRS70231</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="AWE 6080 UA"><span>AWE 6080 UA</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="AWE 55141 UA"><span>AWE 55141 UA</span></div>
+										<div class="new-select__item WhirlpoolOption" data-value="TDLR 55020S UA"><span>TDLR 55020S UA</span></div>
+								</div>
+								<small>Незаповнене поле *</small>
 							</div>
-
-			
 							<div class="form__device-item">
-									<label for="formCode" class="form__device-label">Код 12nc (комерційний код) <span>*</span></label>
-									<input  type="text" id="formCode" placeholder="Введіть код" name="code" class="form__device-input">
+								<label for="formCode" class="form__device-label">Код 12nc (комерційний код) <span>*</span></label>
+								<input  type="text" id="formCode" placeholder="Введіть код" name="code" class="form__device-input">
+								<small>Перевірте модель та бренд *</small>
 							</div>
-							<div class="form__device-item form__device-serial">
-									<label for="formSerial" class="form__device-label">Серійний номер <span>*</span></label>
-									<span class="form__device-serial-examp" >Серійний номер є унікальним ідентифікатором вашого пристрою (наприклад. 379633322115).</span>
-									<span class="span-hover">i</span>
+							<div class="form__device-item">
+								<label for="formSerial" class="form__device-label">Серійний номер <span>*</span></label>
+								<div class="form__device-info">
 									<input  type="text" id="formSerial" placeholder="Введіть cерійний номер" name="number" class="form__device-input serial__code">
+									<span class="form__device-examp" >Серійний номер є унікальним ідентифікатором вашого пристрою (наприклад. 379633322115).</span>
+									<span class="span-hover">i</span>
+									<small>Незаповнене поле *</small>
+								</div>
 							</div>
 							<div class="form__device-item">
-									<label for="formCode" class="form__device-label">Серійний номер <span>*</span></label>
-									<input  type="date" id="formCode" placeholder="Введіть номер" name="number" class="form__device-input">
+								<label for="formDate" class="form__device-label">Дата продажу <span>*</span></label>
+								<input  type="date" id="formDate" placeholder="Введіть номер" name="number" class="form__device-input">
+								<small class="form__device-small">У акції беруть участь лише фіскальні чеки від 6-ого вересня 2021 року. Також з моменту покупки має пройти не менше ніж 14 днів *</small>
 							</div>
 							<div class="form__device-item">
-									<label for="formShopname" class="form__device-label">Назва магазину <span>*</span></label>
-									<select name="shopname" class="select form__device-shop" id="formShopname">
-											<option value="" selected="" disabled="">Оберіть варіанти</option>
-											<option value="COMFY">COMFY</option>
-											<option value="Eldorado">Eldorado</option>
-											<option value="Фокстрот">Фокстрот</option>
-											<option value="Епіцентр">Епіцентр</option>
-											<option value="Rozetka">Rozetka</option>
-											<option value="whirlpool-store.com.ua">whirlpool-store.com.ua</option>
-									</select>
+								<label for="formShopname" class="form__device-label">Назва магазину <span>*</span></label>
+								<select name="shopname" class="select form__device-shop" id="formShopname">
+									<option value="" selected="" disabled="">Оберіть варіанти</option>
+									<option value="COMFY">COMFY</option>
+									<option value="Eldorado">Eldorado</option>
+									<option value="Фокстрот">Фокстрот</option>
+									<option value="Епіцентр">Епіцентр</option>
+									<option value="Rozetka">Rozetka</option>
+									<option value="whirlpool-store.com.ua">whirlpool-store.com.ua</option>
+								</select>
+								<small>Незаповнене поле *</small>
 							</div>
 							<div class="form__device-item">
-									<div class="form__label">Поле для завантаження фото </div>
-									<div class="file">
-											<div class="file__item">
-													<input accept=".jpg, .png, .gif" type="file" placeholder="Завантажити фото" name="image" id="formImage" class="file__input">
-													<div class="file__button">Завантажити</div>
-											</div>
-											<div id="formPreview" class="file__preview"></div>
+								<div class="form__label">Поле для завантаження фото </div>
+								<div class="file">
+									<div class="file__item">
+										<input accept=".jpg, .png, .gif" type="file" placeholder="Завантажити фото" name="image" id="formImage" class="file__input">
+										<div class="file__button">Завантажити</div>
 									</div>
+									<div id="formPreview" class="file__preview"></div>
+								</div>
+								<small>Незаповнене поле *</small>
 							</div>
 							<!-- <div class="form__device-item">
 									<div class="checkbox">
 											<input type="checkbox" checked id="formAgreementRules" class="checkbox__input _require">
 											<label for="formAgreementRules" class="checkbox__label"><span>Звертаємо Вашу увагу, що перевірку справжності чека буде проводитись через сайт <a href="https://cabinet.tax.gov.ua/cashregs/check">податкової служби.</a></span></label>
 									</div>
+									<small>Незаповнене поле *</small>
 							</div> -->
+							<div class="g-recaptcha" data-sitekey="your_site_key"></div>
 							<button type="submit" class="form__button" >Зареєструвати</button>
-
-
+						</div>
+					</form>
+					<div class="main__block-register_img">
+						<img src="" alt="">
 					</div>
-				</form>
+				</div>
+
 			</div>
 	</section>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="script.page.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
 
