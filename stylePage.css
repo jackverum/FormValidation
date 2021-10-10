@@ -130,6 +130,7 @@ form h2 {
 
 
 .form__peron-item small,
+.form__adress-item small,
 .form__device-item small {
     position: absolute;
     color: var(--error-color);
