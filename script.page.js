@@ -23,7 +23,16 @@ const form = document.getElementById('form');
 				const formPhoneConfirm = document.getElementById('formPhoneConfirm');
 				const formEmail = document.getElementById('formEmail');
 				const formSecondEmail = document.getElementById('formSecondEmail');
-
+				
+				const formRegion = document.getElementById('formRegion');
+				const formStreet = document.getElementById('formStreet');
+				const formIndex = document.getElementById('formIndex');
+				const formPostAdress = document.getElementById('formPostAdress');
+				
+				const formAgreement = document.getElementById('formAgreement');
+				const radioMesseging = document.querySelectorAll('input[type=radio]');
+				console.log(radioMesseging.checked);
+				
 
 				const formDevice = document.getElementById('formDevice');
 				const formBrand = document.getElementById('formBrand');
@@ -34,10 +43,30 @@ const form = document.getElementById('form');
 				const formShopname = document.getElementById('formShopname');
 				const formImage = document.getElementById('formImage');
 
+
+				const formDeviceForm = document.querySelector('.form__device');
+				let sel = formDeviceForm.querySelectorAll('select');
+				let inp = formDeviceForm.querySelectorAll('input');
 // document.addEventListener('DOMContentLoaded', function () {
-				
+		
+	for(let i = 0; i < sel.length; i++) {
+		console.log(sel[i].disabled = true);
+		sel[i].style.border = '1px solid gray';
+		
+		// console.log(inp[i].setAttribute('disabled'));
+	}
+	for(let i = 0; i < inp.length; i++) {
+		console.log(inp[i].disabled = true);
+		if (inp[i].getAttribute('type') === 'file') {
+			continue
+		} else {
+			inp[i].style.border = '1px solid gray';
+		}
+		// console.log(inp[i].setAttribute('disabled'));
+	}
 				
 	form.addEventListener('submit', formSend);
+	formAgreement.addEventListener('change', checkBoxConfirm);
 	
 	function showSuccess(input) {
 			input.parentElement.classList.remove('_error');
@@ -103,23 +132,94 @@ const form = document.getElementById('form');
 				// };
 
 function checkRequired(itemArr) {
-	console.log(itemArr);
-
+// console.log(itemArr);
+	
 	itemArr.forEach(function(input) {
+// console.log(input.checked);
 			if(input.value.trim() === '') {
 					showError(input, 'Незаповнене поле *');
 							// small.className = '_error';
 			} else {
 					showSuccess(input);
 			}
-	})
-}
-				
-				
-function formSend(e) {
-// async function formSend(e) {
-	e.preventDefault();
+			// if(!this.form.checkbox.checked)
+			// {
+			// 	alert('You must agree to the terms first.');
+			// 	return false;
+			// }
+		})
+	}
+
+	function checkBoxConfirm(params) {
+		console.log(radioMesseging.checked);
+
+		for(let i = 0; i < radioMesseging.length; i++) {
+			console.log(radioMesseging[i].checked);
+			if(radioMesseging[i].checked) {
+				// if(!formAgreement.checked) {
+					alert("CH B")
+					// console.log(formDevice.closest('.form__device'));
+					// console.log(formDevice.getAttribute('div'));
+					// let inp = formDevice.getElementsByTagName('select');
+					console.log(inp);
+					// inp.forEach(inp => inp.setAttributeNode('disabled'));
+		
+					for(let i = 0; i < sel.length; i++) {
+						console.log(sel[i].disabled = true);
+						sel[i].style.border = '1px solid gray';
+						showError(sel[i], 'Активуйте чекбокс *');
+						// console.log(inp[i].setAttribute('disabled'));
+					}
+					for(let i = 0; i < inp.length; i++) {
+						console.log(inp[i].disabled = true);
+						showError(inp[i], 'Активуйте чекбокс *');
+						
+						if (inp[i].getAttribute('type') === 'file') {
+							continue
+						} else {
+							inp[i].style.border = '1px solid gray';
+						}
+						// console.log(inp[i].setAttribute('disabled'));
+					}
+					// let arr = [].slice(inp).map(function (node) {
+					// 	return node;
+					// });
+					// console.log(arr);
+					// console.log([].slice(inp).map(function (node) {
+					// 	return node;
+					// }));
+				} else if (radioMesseging[i].checked) {
+				// } else if (formAgreement.checked || radioMesseging.checked) {
+					alert('CB - Good')
+					for(let i = 0; i < sel.length; i++) {
+						console.log(sel[i].disabled = false);
+						sel[i].style.border = '1px solid gray';
+						showError(sel[i], 'Активуйте чекбокс *');
+						// console.log(inp[i].setAttribute('disabled'));
+					}
+					for(let i = 0; i < inp.length; i++) {
+						console.log(inp[i].disabled = false);
+						showError(inp[i], 'Активуйте чекбокс *');
+						
+						if (inp[i].getAttribute('type') === 'file') {
+							continue
+						} else {
+							inp[i].style.border = '1px solid gray';
+						}
+						// console.log(inp[i].setAttribute('disabled'));
+					}
+				}
+		}
+
 	
+	}
+	
+	
+	function formSend(e) {
+		// async function formSend(e) {
+		e.preventDefault();
+		
+	console.log(radioMesseging);
 	// console.log(formName.value);
 	// console.log(formDevice.value);
 	// console.log(formBrand.value);
@@ -130,12 +230,15 @@ function formSend(e) {
 					formPhoneConfirm, formEmail, formSecondEmail,
 					formDevice, formBrand, modelname,
 					formCode, formSerial, formDate, 
-					formShopname, formImage, 				
+					formShopname, formImage, 
+					formRegion, formStreet, formIndex, formPostAdress,
+					formAgreement 				
 			]);
 	checkMatchInputs(formPhone, formPhoneConfirm);
 	checkEmail(formEmail);
 	checkEmail(formSecondEmail);
 	checkMatchInputs(formEmail, formSecondEmail);
+	
 	// checkEmail(formEmail, formSecondEmail);
 	
 	// validateEmail(formEmail)
@@ -143,6 +246,10 @@ function formSend(e) {
 
 } // formSend(e)
 // }) // DOMContentLoaded
+
+
+
+
 
 function onSubmit(token) {
 		document.getElementById("demo-form").submit();

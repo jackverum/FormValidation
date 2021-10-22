@@ -112,7 +112,8 @@ form h2 {
     margin-bottom: 40px;
 }
 
-.form__peron-item {
+.form__peron-item,
+.form__adress-item {
     position: relative;
 }
 .form__peron-item label,
@@ -146,6 +147,7 @@ form h2 {
 }
 
 .form__peron-item._error small,
+.form__adress-item._error small,
 .form__device-item._error small,
 .form__device-info._error small {
     visibility: visible;
@@ -153,8 +155,8 @@ form h2 {
 
 .form__peron-input._error,
 .form__adress-input._error,
-.form__adress .select._error,
-.form__device .select._error,
+.form__adress.select._error,
+.form__device.select._error,
 .form__device-input._error,
 .form__device-info._error {
     box-shadow: 1px 1px 3px #cc3411;
@@ -193,6 +195,11 @@ input:focus {
 
 .form__item p {
     margin-bottom: 30px;
+    margin-right: 15px;
+}
+.form__item.agreement {
+    display: flex;
+    align-items: flex-start;
 }
 
 
@@ -302,7 +309,7 @@ input:focus {
     content: "";
     display: inline-block;
     width: 17px;
-    height: 18px;
+    height: 17px;
     position: absolute;
     left: 0;
     bottom: 1px;
@@ -340,10 +347,11 @@ input[type="checkbox"]:checked + label::after {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    left: 0;
-    top: -2px;
+    left: 0px;
+    top: 0px;
     width: 17px;
-    height: 19px;
+    height: 16px;
+    line-height: 14px;
 }
 
 .checkbox__block {
