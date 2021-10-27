@@ -21,6 +21,70 @@
     		padding: 20px;
     		margin: 20px;
     	}
+      .btn-back {
+        background-color: rgb(102, 115, 231);
+        
+      }
+
+
+
+
+      /* //FOR IMAGE // */
+      .image-comparison {
+    position: relative;
+    display: inline-block;
+    width: 520px;
+    width: 100%;
+    max-width: 520px;
+    overflow: hidden;
+}
+
+.image-comparison__before {
+    position: absolute;
+    width: 50%;
+    overflow: hidden;
+}
+
+.image-comparison__image {
+    display: block;
+}
+
+/* Ползунок */
+.image-comparison__slider {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 100%;
+    cursor: col-resize;
+    outline: none;
+    border: none;
+}
+
+/* Стрелки */
+.image-comparison__slider::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 15px);
+    left: -14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent url('./img/arrows.png') no-repeat center;
+    border: 2px solid #fff;
+    background-size: 90%;
+}
+
+.image-comprison__slider:hover,
+.image-comprison__slider:focus,
+.image-comprison__slider:hover::before,
+.image-comprison__slider:focus::before {
+    background-color: #ccc;
+    outline: none;
+    border: none;
+}
     </style>
   </head>
 
@@ -46,14 +110,43 @@
       				<label for="">Введите email</label>
       				<input type="text" class="form-control" id="" name="user_email" placeholder="mail@gmail.com">
       			</div>
-      		
+
+            <div class="form__device-item">
+                <div class="file__item">
+                  <input accept=".jpg, .png, .gif" type="file" placeholder="Завантажити фото" name="image" id="formImage" class="file__input">
+                  <div class="file__button">Завантажити</div>
+                </div>
+                <div id="formPreview" class="file__preview"></div>
+            </div>
+
+            
       			<button type="submit" class="btn btn-primary">Отправить форму</button>
       		</form>
+
+
+
+
+          <!-- <form action="#" class="form__body" id="form" method="POST"> -->
+            <div class="form__device-item-data">
+              <label for="formDate" class="form__device-label">Дата продажу <span>*</span></label>
+              <input  type="date" id="formDate" placeholder="Введіть номер" name="number" class="form__device-input">
+              <small class="form__device-small">У акції беруть участь лише фіскальні чеки від 6-ого вересня 2021 року. Також з моменту покупки має пройти не менше ніж 14 днів *</small>
+            </div>
+            <small id="small"></small>
+            <button class="button">PRESS</button>
+            <!-- </form> -->
+            <div id="image-comparison">
+              <img src="./welcome.png" alt="alt">
+              <img src="./welcome1.png" alt="alt">
+              <!-- <img src="./img/1.jpeg" alt="alt">
+              <img src="./img/2.jpeg" alt="alt"> -->
+            </div>
       	</div><!-- .col-sm-4 -->
       </div> <!-- .row -->
 
     </div><!-- /.container -->
-
+  
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -62,6 +155,140 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script> -->
+ 
+    <!-- <script>
+      const fileImage = document.getElementById('formImage'),
+            formPreview = document.getElementById('formPreview');
+
+            
+      fileImage.addEventListener('change', () => {
+        console.log(fileImage.files[0]);
+        uploadFile(fileImage.files[0]);
+      })
+
+      function uploadFile(file) {
+        let reader = new FileReader();
+        reader.onload = function(e) {
+          formPreview.innerHTML = `<img src="${e.target.result}" alt="F">`;
+        };
+        reader.onerror = function(e) {
+          alert("Failed to read file!\n\n" + reader.error);
+        };
+
+        reader.readAsDataURL(file);
+      }
+    </script> -->
+ <script>
+  const form = document.querySelector('.form__device-item-data');
+  const btn = document.querySelector('.button');
+  const formDate = document.querySelector('input[type="date"]');
+  console.log(form, btn);
+  
+  function checkDataSale() {
+    console.log(formDate.value);
+
+
+    // let d = new Date("2021-11-16");
+    let d = new Date(formDate.value);
+    let dd = new Date();
+    // console.log(d.getUTCFullYear());
+    // console.log(d.getMonth());
+    // console.log(d.getDate());
+    // console.log(d.getDay());
+    // console.log(dd.getUTCFullYear());
+    // console.log(dd.getMonth());
+    // console.log(dd.getDate());
+    // console.log(dd.getDay());
+    // let newDate = d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear()
+    // console.log(newDate);
+console.log('============');
+// console.log(Date.parse(d));
+// console.log(Date.parse(dd));
+// console.log(d);
+
+let day_2 = new Date(),
+    day_1 = new Date(formDate.value);
+
+function diffDates(day_one, day_two) {
+  console.log(Math.ceil((day_one - day_two) / (60 * 60 * 24 * 1000)));
+  let diferenceTime = Math.ceil((day_one - day_two) / (60 * 60 * 24 * 1000));
+  let small = document.querySelector('#small');
+  if (diferenceTime >= 16) {
+    small.innerHTML = `Настав гарантійний термін, Ви вказали число ${diferenceTime - 1}`;
+  } 
+else if (diferenceTime > 1 &&  diferenceTime <= 15) {
+  small.innerHTML = `Ви вказали число ${diferenceTime - 1}, та не має ще гарантійного терміну`;
+} 
+else if (diferenceTime == 1) {
+  small.innerHTML = `Ви вказали сьогоднішнє число, та не має ще гарантійного терміну`;
+} 
+  else if(formDate.value == '') {
+    small.innerHTML = `No Data`
+  } 
+  else  {
+  //  } else if (diferenceTime >= -1) {
+    small.innerHTML = `Ви вказали майбутнє число`
+  }
+};
+console.log(diffDates(day_2, day_1));
+  }
+
+
+
+  
+  btn.addEventListener('click', checkDataSale);
+
+
+
+  function imageComparison(selector) {
+
+let comparison = $(selector)
+    .addClass('image-comparison')
+    .prepend('<div class="image-comparison__before"></div>')
+    .append('<button class="image-comparison__slider"></button>');
+
+let images = comparison
+    .find('img')
+    .addClass('image-comparison__image')
+    .css('max-width', comparison.width());
+
+let before = comparison
+    .find('.image-comparison__before')
+    .append(images.eq(0));
+
+comparison
+    .find('.image-comparison__slider')
+    .on('dragstart', () => false) // отмена станд. drug&drop 
+    .on('mousedown', function(e) {
+        let slider = $(this);
+        let doc = $(document).on('mousemove', (e) => {
+            let offset = e.pageX - comparison.position().left;
+            let width = comparison.width();
+
+            // установим границы, чтобы ползунок не выходил 
+            if (offset < 0) offset = 0;
+            if (offset > width) offset = width;
+
+            slider.css('left', offset + 'px');
+            before.css('width', offset + 'px');
+        });
+
+        doc.on('mouseup', () => doc.off('mousemove'));
+    });
+};
+
+imageComparison('#image-comparison');
+
+
+
+
+
+
+
+
+
+</script>
   </body>
 </html>
 	
+

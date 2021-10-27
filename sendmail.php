@@ -13,7 +13,7 @@ require 'PHPMailer-6.5.1/src/PHPMailer'
 $mail = new PHPMailer(true);
 $mail->CharSet = 'UTF-8';
 $mail->setLanguage('ru', 'PHPMailer-6.5.1/language/');
-$mail->isHTML(true);
+$mail->IsHTML(true);
 
 //Recipients - от кого письмо
 $mail->setFrom('codejs@i.ua', 'MailerCodeJS');
@@ -21,6 +21,12 @@ $mail->setFrom('codejs@i.ua', 'MailerCodeJS');
 $mail->addAddress('codejs@i.ua');   
 //format to HTML
 $mail->Subject = 'Отправка письма';
+
+// Hend - рука
+$hand = "Правая";
+if($_POST['hand'] == "left") {
+    $hand = "Левая";
+}
 
 
 // Тело письма
@@ -32,6 +38,9 @@ if(trim(!empty($_POST['name']))){
 if(trim(!empty($_POST['email']))){
     $body.='<p>E-mail: '.$_POST['email'].'</p>';
 }
+if(trim(!empty($_POST['hand']))) {
+    $body.='<p>Рука: '.$hand.'</p>'
+}
 if(trim(!empty($_POST['age']))){
     $body.='<p>Возраст: '.$_POST['age'].'</p>';
 }
@@ -39,7 +48,17 @@ if(trim(!empty($_POST['message']))){
     $body.='<p>Сообщение: '.$_POST['message'].'</p>';
 }
 
-
+//Send file
+if(!empty($_FILES['image']['tmp_name'])) {
+    // path downloadfile
+    $filePath = __DIR__ . "/files/" . $_FILES['image']['name'];
+    // download file
+    if (copy($_FILES['image']['tmp_nmae'], $filePath)) {
+        $fileAttach = $filePath;
+        $body.='<p>Фото в приложении</p>';
+        $mail->addAttachment($fileAttach);
+    }
+}
 
 
 $mail->Body = $body;
@@ -57,31 +76,4 @@ header('Content-type: application/json');
 echo json_encode($response);
 
 
-
-
-
-// Оберіть варіанти
-// Код 12nc (комерційний код) *
-
-// Серійний номер *
-
-// iСерійний номер є унікальним ідентифікатором вашого пристрою (наприклад. 379633322115).
-// Дата придбання *
-
-
-// дд.мм.гггг
-// Номер фіксального чеку *
-
-// Назва магазину *
-
-// Оберіть варіанти
-// Поле для завантаження фото *
-
-// Файл не выбран
-// Завантажити фотоЗавантажити
-// Звертаємо Вашу увагу, що перевірку справжності чека буде проводитись через сайт податкової служби.
-
-// Обов'язкові поля *
-
-
-// Зареєструвати
+/>

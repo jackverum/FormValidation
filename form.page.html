@@ -27,7 +27,7 @@
 				<div class="main__block-register_form">
 					<form action="#" class="form__body" id="form" method="POST">
 					<!-- <form action="telega.php" class="form__body" id="form" method="POST"> -->
-						<div class="form__peron">
+						<div class="form__peron" style="display: block;">
 							<!-- <form action="#" class="form__peron-body" id="form"> -->
 							<h2 class="form__peron-item-title">Особиста інформація</h2>
 							<div class="form__peron-item">
@@ -292,20 +292,23 @@
 								<div class="form__label">Поле для завантаження фото </div>
 								<div class="file">
 									<div class="file__item">
-										<input accept=".jpg, .png, .gif" type="file" placeholder="Завантажити фото" name="image" id="formImage" class="file__input">
-										<div class="file__button">Завантажити</div>
+										<input id="formImage" class="file__input" accept=".jpg, .png, .gif" type="file" placeholder="Завантажити фото" name="image">
+										<label for="formImage" class="formImageLabel">
+											<span>Завантажити фото</span>
+											<div class="file__button">Завантажити</div>
+										</label>	
 									</div>
 									<div id="formPreview" class="file__preview"></div>
 								</div>
 								<small>Незаповнене поле *</small>
 							</div>
-							<!-- <div class="form__device-item">
-									<div class="checkbox">
-											<input type="checkbox" checked id="formAgreementRules" class="checkbox__input _require">
-											<label for="formAgreementRules" class="checkbox__label"><span>Звертаємо Вашу увагу, що перевірку справжності чека буде проводитись через сайт <a href="https://cabinet.tax.gov.ua/cashregs/check">податкової служби.</a></span></label>
+							<div class="form__device-item">
+									<div class="formAgreementRules">
+											
+										<span>Звертаємо Вашу увагу, що перевірку справжності чека буде проводитись через сайт <a href="https://cabinet.tax.gov.ua/cashregs/check">податкової служби.</a></span>
 									</div>
 									<small>Незаповнене поле *</small>
-							</div> -->
+							</div>
 							<div class="g-recaptcha" data-sitekey="your_site_key"></div>
 							<button type="submit" class="form__button" >Зареєструвати</button>
 						</div>

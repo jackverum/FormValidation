@@ -170,7 +170,9 @@ form h2 {
 .form__peron-label,
 .form__adress-label,
 .form__device-label,
-.form__confidentiality p
+.form__confidentiality p,
+.form__label,
+.formAgreementRules
 {
     display: block;
     margin-bottom: 15px;
@@ -500,13 +502,106 @@ display: flex;
 }
 
 
+.file__preview { 
+    display: inline-block;
+    max-width: 100px;
+    margin: 10px 0 0 0;
+}
+
+.file__preview img {
+    max-width: 100%;
+}
+
+.file__item {
+    width: 80%;
+    display: flex;
+    /* position: relative; */
+    /* margin-bottom: 15px; */
+    /* border: 1px solid blue;
+    height: 100%; */
+}
 
 
+
+.file__input {
+    position: absolute;
+    border: 1px solid #000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: cacl(100% - 40px);
+    font-size: 0;
+    opacity: 0;
+    background: #cdc;
+}
+
+.file__item label {
+    border: 1px solid #edb112;
+    border-radius: 3px;
+    padding: 8px;
+    margin-bottom: 25px;
+    width: 100%;
+    color: #cbcac9;
+    position: relative; 
+    cursor: pointer;
+    /*
+    */
+}
+
+.file__button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #353535;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+    background-color: #edb112;
+    border-radius: 3px;
+    padding: 5px 20px;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+    max-width: 160px;
+}
+
+input[type="file"] {
+    /* padding: 20px;
+    border: 1px solid #000; */
+
+}
+
+.formImageLabel {
+    border: 1px solid gold;
+    width: 80%;
+}
+
+.formAgreementRules {
+    margin-top: 25px;
+}
 
 .form__button {
-    position: fixed;
+    /* position: relative; */
+    margin-top: 25px;
     padding: 10px 30px;
     background-color: gold;
     border-radius: 10px;
     top: 100px;
+}
+
+
+
+
+/* select:active,
+select:focus, */
+select > option:checked,
+select > option:first-child,
+select::placeholder,
+input::placeholder {
+    display: none;
+    color: #cbcac9;
+    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
 }
